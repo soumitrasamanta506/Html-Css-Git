@@ -5,8 +5,13 @@ h4,
 p,
 li {
   font-family: sans-serif;
+  color: #444;
 }
-
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
 h1 {
   /* color: blue; */
   font-size: 26px;
@@ -37,6 +42,110 @@ li {
   font-size: 20px;
 }
 
-footer p {
+/* footer p {
   font-size: 10px;
+} */
+
+#author {
+  font-style: italic;
+  font-size: 18px;
 }
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ul {
+  list-style: none;
+} */
+
+.related-ul {
+  list-style: none;
+}
+
+header {
+  background-color: #f7f7f7;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+}
+
+/* class for bold first list --> this is not a good idea, for this we use seudo class*/
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+/* seudo class for bold first list */
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+/* for another child */
+/*
+li:nth-child(even) {
+  color: red;
+}
+*/
+
+/* below seudo class won't work becaz p is not first child of article */
+article p:first-child {
+  color: aqua;
+}
+
+/* Styling links */
+a:link {
+  color: #109810;
+  text-decoration: none;
+}
+
+/* after visiting a link its color will be change just like google */
+a:visited {
+  color: blueviolet;
+}
+/* if we placed cursor on link then its property will be change */
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline wavy orangered;
+}
+/* if we click on a link then below property will be reflect*/
+a:active {
+  background-color: black;
+}
+
+/* Resolving conflict */
+/* all selector is applied in element. if same declaration is present in multiple selector, this is called conflict */
+/* 
+  if we mark important to any declaration,this is applied
+  if inline style present then this is applied
+*/
+/* In confilicting first priority is id declaration */
+#copyright1 {
+  font-size: 16px;
+  color: red;
+}
+
+/* In conflicting second priority is class selector */
+.copyright1 {
+  color: orange;
+}
+/* If multiple class is present, last class will be applied */
+.copyright2 {
+  color: #109810;
+}
+
+/* element selector have last priority */
+footer p {
+  color: aqua !important;
+}
+
+/* if universal selector is present,  it's have last priority*/
